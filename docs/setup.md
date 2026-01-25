@@ -87,7 +87,8 @@ mypy --config-file mypy.ini src/betteredit
 
 ### Unit Tests
 ```bash
-python -m unittest discover -s tests -p "test*.py"
+#python -m unittest discover -s tests -p "test*.py"
+pytest
 ```
 
 ## Usage Examples
