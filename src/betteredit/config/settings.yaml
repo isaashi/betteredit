@@ -1,0 +1,51 @@
+# config/settings.yaml
+
+# General
+image_path: analysis/image_set/poppies.jpeg
+target_size: [512, 224]
+save_visuals: true
+output_dir: outputs/ 
+
+# Edge-detection parameters
+edge_detection:
+  methods: [canny, sobel, piotr, laplacian]
+  canny_sigma: 0.33
+  sobel_ksize: 3
+  laplacian_ksize: 3
+  piotr_model_path: models/model.yml.gz
+  return_density: true
+  return_salience: true
+  salience_strategy: product
+  density_window_size: 16
+  intra_fusion_strategy: weighted
+  intra_fusion_weights:
+    piotr: 0.4
+    canny: 0.3
+    sobel: 0.15
+    laplacian: 0.15
+
+# Color-detection parameters
+color_detection:
+  salience_strategy: weighted
+  contrast_method: combined
+  sobel_weight: 0.5
+  rarity_space: lab
+  rarity_k: 8
+  weights:
+    hue: 0.1
+    sat: 0.3
+    rarity: 0.2
+    lum: 0.4
+
+# Neural inter-fusion parameters
+neural_inter_fusion:
+  enabled: false
+  inter_fusion_strategy: "neural"
+  model_type: "attention"
+  input_dim: 256
+  hidden_dim: 128
+  num_heads: 4
+  learning_rate: 0.001
+  batch_size: 16
+  epochs: 100
+  model_save_path: "models/neural_inter_fusion.pth"

@@ -1,0 +1,8 @@
+# Suppress generated files from PR diffs
+*.png linguist-generated=true
+*.jpg linguist-generated=true
+*.jpeg linguist-generated=true
+*.json linguist-generated=true
+outputs/** linguist-generated=true
+benchmarking/outputs/** linguist-generated=true
+*.log linguist-generated=true

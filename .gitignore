@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Distribution / packaging
+venv/
+*.egg-info/
+
+# Installer logs
+
+# Unit test / coverage reports
+
+# pyenv
+
+# mypy
+.mypy_cache/
+
+# Environments
+
+# VS Code
+
+# Mac system files
+outputs/analysis/results.json
+
+# Generated outputs - do not track
+outputs/
+benchmarking/outputs/
+*.png
+*.jpg
+*.jpeg
+*.log
