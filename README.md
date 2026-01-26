@@ -1,4 +1,4 @@
-# betteredit for Photographers
+# betteredit - Shows What Draws the Eye in an Image
 This project is under active development. 
 See: 
 - docs/current_state.md for where the project stands at present
